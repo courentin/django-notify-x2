@@ -9,6 +9,12 @@ Changelog
     - Fix #17 where queryset filter was not being applied before updating
     - Limit django verison dependency
 
+- Version 0.1.7
+    - Support for ``mark_read`` and ``mark_unread`` added to allow for github-style notifications
+    - ``mark_as_read`` and ``mark_as_unread`` now check state and return an HTTP 204 Response if no change is required and HTTP 200 Response otherwise
+    - ``.notification-badge`` class support added on ``mark_read`` and ``mark_unread`` ajax calls. The notification will be incremented or decremented appropriately.
+    - Updated on 9th November 2016
+
 - Version 0.1.6
     - ``prefetch_relations`` can now be used as a queryset method.
     - More clear target precedence.
