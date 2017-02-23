@@ -1,6 +1,9 @@
 Changelog
 =========
 
+- Version 0.1.10
+    - Support for ``set`` objects added when passing a ``recipient_list`` to ``notify.send()``
+
 - Version 0.1.9
     - Support Django 2.0
     - Updated on 18th Jan 2018
