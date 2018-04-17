@@ -1,33 +1,56 @@
+dist: trusty
+sudo: false
 language: python
 
-python:
-    - "2.7"
+cache:
+    directories:
+     - $HOME/.cache/pip
 
 install:
-    pip install tox
-
-env:
-  - TOXENV=py27-django-18
-  - TOXENV=py27-django-19
-  - TOXENV=py27-django-110
-  - TOXENV=py27-django-111
-  - TOXENV=py34-django-18
-  - TOXENV=py34-django-19
-  - TOXENV=py34-django-110
-  - TOXENV=py34-django-111
-  - TOXENV=py35-django-18
-  - TOXENV=py35-django-19
-  - TOXENV=py35-django-110
-  - TOXENV=py35-django-111
-  - TOXENV=py35-django-20
-  - TOXENV=py36-django-18
-  - TOXENV=py36-django-19
-  - TOXENV=py36-django-110
-  - TOXENV=py36-django-111
-  - TOXENV=py36-django-20
+    pip install tox pip --upgrade
 
 matrix:
   fast_finish: true
+  include:
+    - python: 2.7
+      env: TOXENV=py27-django-18
+    - python: 2.7
+      env: TOXENV=py27-django-19
+    - python: 2.7
+      env: TOXENV=py27-django-110
+    - python: 2.7
+      env: TOXENV=py27-django-111
+
+    - python: 3.4
+      env: TOXENV=py34-django-18
+    - python: 3.4
+      env: TOXENV=py34-django-19
+    - python: 3.4
+      env: TOXENV=py34-django-110
+    - python: 3.4
+      env: TOXENV=py34-django-111
+
+    - python: 3.5
+      env: TOXENV=py35-django-18
+    - python: 3.5
+      env: TOXENV=py35-django-19
+    - python: 3.5
+      env: TOXENV=py35-django-110
+    - python: 3.5
+      env: TOXENV=py35-django-111
+    - python: 3.5
+      env: TOXENV=py35-django-20
+
+    - python: 3.6
+      env: TOXENV=py36-django-18
+    - python: 3.6
+      env: TOXENV=py36-django-19
+    - python: 3.6
+      env: TOXENV=py36-django-110
+    - python: 3.6
+      env: TOXENV=py36-django-111
+    - python: 3.6
+      env: TOXENV=py36-django-20
 
 script:
     tox
