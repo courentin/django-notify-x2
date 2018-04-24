@@ -2,15 +2,15 @@
 django-notify-x: quick guide
 ============================
 
-.. image:: https://readthedocs.org/projects/django-notify-x/badge/?version=latest
-   :target: http://django-notify-x.readthedocs.org/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/django-notify-x2-luzfcb-fork/badge/?version=latest
+   :target: http://django-notify-x2-luzfcb-fork.readthedocs.org/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. image:: https://badge.fury.io/py/django-notify-x.svg
    :target: https://badge.fury.io/py/django-notify-x
 
-.. image:: https://travis-ci.org/v1k45/django-notify-x.svg
-   :target: https://travis-ci.org/v1k45/django-notify-x
+.. image:: https://travis-ci.org/luzfcb/django-notify-x2.svg
+   :target: https://travis-ci.org/luzfcb/django-notify-x2
 
 
 Django NotifyX is a reusable app which adds notification system features to your Django app.
@@ -32,11 +32,11 @@ Downloading the package
 
 Probably the best way to install is by using `PIP`::
 
-    $ pip install django-notify-x
+    $ pip install -e git+https://github.com/luzfcb/django-notify-x2.git
 
 If you want to stay on the bleeding edge of the app::
 
-    $ git clone https://github.com/v1k45/django-notify-x.git
+    $ git clone https://github.com/luzfcb/django-notify-x2.git
     $ cd django-notify-x
     $ python setup.py install
 
